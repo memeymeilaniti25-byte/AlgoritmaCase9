@@ -4,7 +4,9 @@ public class percobaanSandiLogin {
         String pengguna;
         String sandi;
         Scanner input = new Scanner(System.in);
+        Boolean LoginBerhasil = false;
 
+        while(!LoginBerhasil){
         System.out.print("Masukkan Nama Pengguna : ");
         pengguna = input.nextLine();
 
@@ -13,11 +15,14 @@ public class percobaanSandiLogin {
 
         if(pengguna.equals("admin") && sandi.equals("123")){
             System.out.print("Anda Berhasil Login");
+            LoginBerhasil = true;
         }else{
             System.out.println("Tidak Dapat login, Pengguna atau Sandi Salah");
         }
         input.close();
+        
 
-    }
+        }
     
+    }    
 }
